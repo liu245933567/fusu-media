@@ -1,0 +1,10 @@
+[package]
+name = "fusu-media"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[[bin]]
+name = "fusu-media"
+path = "src-rs/main.rs"
