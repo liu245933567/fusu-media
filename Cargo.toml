@@ -3,8 +3,21 @@ name = "fusu-media"
 version = "0.1.0"
 edition = "2024"
 
-[dependencies]
-
 [[bin]]
 name = "fusu-media"
 path = "src-rs/main.rs"
+
+[dependencies]
+axum = "0.8.8"
+axum-extra = { version = "0.12.5", features = ["with-rejection"] }
+tokio = { version = "1.50.0", features = ["full"] }
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.143"
+anyhow = "1.0.102"
+thiserror = "2.0.18"
+dotenv = "0.15.0"
+once_cell = "1.19.0"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tower = { version = "0.5.2", features = ["util", "timeout"] }
+tower-http = { version = "0.6.1", features = ["add-extension", "trace"] }
